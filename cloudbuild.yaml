@@ -10,7 +10,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'hospitalmanagement-nm'
+  - 'flask_app-nm'
   - '--image'
   - 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask_app-nm'
   - '--port'
