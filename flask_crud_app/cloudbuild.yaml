@@ -1,18 +1,18 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask_app', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask_app']
+  args: ['push', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app']
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'
   - 'deploy'
-  - 'flask_app'
+  - 'flask-app'
   - '--image'
-  - 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask_app'
+  - 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app'
   - '--port'
   - '8080'
   - '--region'
@@ -29,7 +29,7 @@ steps:
   
 
 images:
-- us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask_app
+- us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app
 
 options:
   logging: CLOUD_LOGGING_ONLY
