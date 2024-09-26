@@ -2,6 +2,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app', '.']
+  dir: 'flask_crud_app'
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app']
