@@ -15,7 +15,7 @@ steps:
   - '--image'
   - 'us-central1-docker.pkg.dev/gcp-training-710/gcf-artifacts/flask-app'
   - '--port'
-  - '8080'
+  - '5000'
   - '--region'
   - 'us-central1'
   - '--platform'
